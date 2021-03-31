@@ -31,13 +31,11 @@ class App extends Component {
 
 handleSubmit = (character) => {
     this.setState({characters: [...this.state.characters, character]});
-    <Form handleSubmit={this.handleSubmit} />
+    return (
+        <Form handleSubmit={this.handleSubmit} />
+    )
 }
 
-submitForm = () => {
-    this.props.handleSUbmit(this.state)
-    this.setState(this.initialState)
-    <input type="button" value="Submit" onClick={this.submitForm} />
-}
+
 
 export default App;
